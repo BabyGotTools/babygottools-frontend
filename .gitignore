@@ -1,0 +1,37 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# next build output
+.next/
+out/
+build/
+
+# local dev-output artifacts
+build_out*.txt
+e2e_*out*.txt
+
+# environment variables — keep .env.example tracked
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+
+# coverage
+coverage/
+
+# typescript incremental builds
+*.tsbuildinfo
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# editors
+.idea/
+*.swp

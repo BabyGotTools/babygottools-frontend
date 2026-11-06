@@ -1,0 +1,553 @@
+/*
+ * Baby Got Tools — theme tokens
+ * Light theme values come from the Stitch "baby_got_tools_home_light_mode" source
+ * (Modern Precision palette). Dark theme values come from the
+ * "baby_got_tools_home_2" source (Baby Got Tools palette, dark-first design).
+ * The active theme class (.dark / .light) is set on <html> before first paint
+ * (see index.html) to prevent theme flashing.
+ */
+
+:root {
+  color-scheme: dark;
+
+  /* ---- Semantic color tokens (dark) ---- */
+  --c-bg: #0f131d;
+  --c-surface: #0f131d;
+  --c-on-surface: #dfe2f1;
+  --c-on-surface-variant: #cbc3d7;
+  --c-sc-lowest: #0a0e18;
+  --c-sc-low: #171b26;
+  --c-sc: #1c1f2a;
+  --c-sc-high: #262a35;
+  --c-sc-highest: #313540;
+  --c-surface-variant: #313540;
+  --c-surface-dim: #0f131d;
+  --c-surface-bright: #353944;
+  --c-outline: #958ea0;
+  --c-outline-variant: #494454;
+  --c-surface-tint: #d0bcff;
+
+  --c-primary: #d0bcff;
+  --c-on-primary: #3c0091;
+  --c-primary-container: #a078ff;
+  --c-on-primary-container: #340080;
+  --c-primary-fixed: #e9ddff;
+  --c-primary-fixed-dim: #d0bcff;
+  --c-on-primary-fixed: #23005c;
+  --c-on-primary-fixed-variant: #5516be;
+  --c-inverse-primary: #6d3bd7;
+
+  --c-secondary: #5de6ff;
+  --c-on-secondary: #00363e;
+  --c-secondary-container: #00cbe6;
+  --c-on-secondary-container: #00515d;
+  --c-secondary-fixed: #a2eeff;
+  --c-secondary-fixed-dim: #2fd9f4;
+  --c-on-secondary-fixed: #001f25;
+  --c-on-secondary-fixed-variant: #004e5a;
+
+  --c-tertiary: #ffb869;
+  --c-on-tertiary: #482900;
+  --c-tertiary-container: #ca801e;
+  --c-on-tertiary-container: #3f2300;
+  --c-tertiary-fixed: #ffdcbb;
+  --c-tertiary-fixed-dim: #ffb869;
+  --c-on-tertiary-fixed: #2c1700;
+  --c-on-tertiary-fixed-variant: #673d00;
+
+  --c-error: #ffb4ab;
+  --c-on-error: #690005;
+  --c-error-container: #93000a;
+  --c-on-error-container: #ffdad6;
+
+  --c-inverse-surface: #dfe2f1;
+  --c-inverse-on-surface: #2c303b;
+
+  /* ---- Text refinement tokens ---- */
+  --tx-faint: #958ea0; /* placeholders, ghost arrows (dark: outline) */
+  --tx-muted: #cbc3d7; /* tiny mono labels (dark: on-surface-variant) */
+  --tx-subtle: #cbc3d7; /* descriptions (dark: on-surface-variant) */
+
+  /* ---- Typography weight differences (600 vs 700 headings, mono labels) ---- */
+  --w-strong: 600;
+  --w-lxs: 600;
+  --w-med: 500;
+  --w-mono-strong: 500;
+
+  /* ---- Selection ---- */
+  --sel-bg: #a078ff;
+  --sel-tx: #340080;
+
+  /* ---- Ambient glow blobs ---- */
+  --glow-1a: rgba(208, 188, 255, 0.15);
+  --glow-1b: rgba(93, 230, 255, 0.1);
+  --glow-2: rgba(208, 188, 255, 0.1);
+  --glow-3: rgba(93, 230, 255, 0.1);
+  --why-glow-a: rgba(208, 188, 255, 0.1);
+  --why-glow-b: rgba(93, 230, 255, 0.1);
+
+  /* ---- Header ---- */
+  --header-bg: rgba(10, 14, 24, 0.8);
+  --header-border: transparent;
+  --header-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+  --logo-glow: rgba(93, 230, 255, 0.2);
+  --logo-ic: #5de6ff;
+  --logo-size: 24px;
+  --profile-ring: #313540;
+
+  --nav-active: #d0bcff;
+  --nav-idle: #cbc3d7;
+  --nav-hover: #dfe2f1;
+
+  --ba-bg: #262a35; /* v2.4 badge */
+  --ba-tx: #5de6ff;
+  --ba-border: transparent;
+  --bs-bg: #1c1f2a; /* "Free & Fast" chip */
+  --bs-tx: #cbc3d7;
+  --bs-border: transparent;
+
+  /* Header search field */
+  --hs-height: 2.5rem;
+  --hs-radius: 0.5rem;
+  --hs-bg: #171b26;
+  --hs-border: transparent;
+  --hs-focus-bg: #1c1f2a;
+  --hs-focus-border: transparent;
+  --hs-focus-ring: none;
+  --hs-pl: 2.5rem;
+  --hs-icon: #cbc3d7;
+
+  --kbd-bg: #313540;
+  --kbd-tx: #cbc3d7;
+  --kbd-border: transparent;
+  --kbd-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+  /* Icon buttons, favorites, sign in */
+  --ib-hov-bg: #262a35;
+  --fav-bg: #00cbe6;
+  --fav-tx: #00363e;
+  --fav-top: -0.25rem;
+  --fav-right: -0.25rem;
+  --fav-min: 16px;
+  --fav-h: 1rem;
+  --radius-pill: 0.75rem;
+  --si-px: 1rem;
+  --si-h: 2.25rem;
+  --si-radius: 0.5rem;
+  --si-bg: #1c1f2a;
+  --si-border: transparent;
+  --si-tx: #dfe2f1;
+  --si-bgh: #262a35;
+  --si-txh: #dfe2f1;
+  --si-shadow: none;
+
+  /* ---- Hero ---- */
+  --hero-pt: 3rem;
+
+  --ey-bg: rgba(38, 42, 53, 0.7); /* badge pill background (sc-high/70) */
+  --ey-bgh: #313540;
+  --ey-border: transparent;
+  --ey-star: #5de6ff;
+  --ey-tx: #dfe2f1;
+  --ey-dot: #5de6ff;
+
+  --gradient-title: linear-gradient(
+    to right,
+    #d0bcff,
+    #5de6ff,
+    #00cbe6
+  );
+
+  --sg-from: rgba(208, 188, 255, 0.3); /* search glow */
+  --sg-to: rgba(93, 230, 255, 0.3);
+  --sg-blur: 16px;
+  --sg-op: 0.4;
+  --sg-oph: 0.75;
+
+  --sf-bg: #171b26; /* hero search field */
+  --sf-border: transparent;
+  --sf-radius: 0.5rem;
+  --sf-py: 0.5rem;
+  --sf-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --sf-focus-bg: #1c1f2a;
+  --sf-focus-border: transparent;
+  --sf-focus-ring: none;
+  --sf-ic: #5de6ff;
+
+  --tp-bg: rgba(38, 42, 53, 0.8); /* trending pills */
+  --tp-tx: #cbc3d7;
+  --tp-bgh: #313540;
+  --tp-txh: #dfe2f1;
+  --tp-border: transparent;
+  --tp-borderh: transparent;
+  --tp-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+  --trust-a: #ffb869;
+  --trust-b: #5de6ff;
+  --trust-c: #d0bcff;
+
+  /* ---- Chips & badges ---- */
+  --mc-bg: #1c1f2a; /* mini chip (popular card category) */
+  --mc-tx: #cbc3d7;
+  --ct-bg: #262a35; /* category tile count chip */
+  --ct-tx: #cbc3d7;
+
+  --tb-bg: rgba(202, 128, 30, 0.3); /* 🔥 Trending badge */
+  --tb-tx: #ffb869;
+  --tb-border: transparent;
+
+  --va-tx: #5de6ff; /* "View all 120+ tools" */
+  --va-txh: #a2eeff;
+
+  /* ---- Category tiles ---- */
+  --tile-bg: #171b26;
+  --tile-bgh: #1c1f2a;
+  --tile-border: transparent;
+  --tile-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tile-shadowh: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tile-hovbg: transparent;
+
+  /* ---- Popular tool cards ---- */
+  --pop-bg: #171b26;
+  --pop-bgh: #1c1f2a;
+  --pop-border: transparent;
+  --pop-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --pop-shadowh: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --pop-foot-border: transparent;
+  --pop-desc: #cbc3d7;
+
+  /* ---- Sponsored callout ---- */
+  --co-bg: linear-gradient(
+    to right,
+    #171b26,
+    #1c1f2a,
+    #171b26
+  );
+  --co-border: transparent;
+  --co-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --co-ic-bg: rgba(93, 230, 255, 0.1);
+  --co-ic-tx: #5de6ff;
+  --co-ic-border: transparent;
+  --co-label: rgba(203, 195, 215, 0.8);
+  --co-btn-bg: #313540;
+  --co-btn-tx: #dfe2f1;
+  --co-btn-bgh: #d0bcff;
+  --co-btn-txh: #3c0091;
+  --co-btn-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+  /* ---- Detailed category (hub) sections ---- */
+  --hc-bg: #171b26;
+  --hc-bgh: #1c1f2a;
+  --hc-border: transparent;
+  --hc-hovbg: transparent;
+  --hc-shadow: none;
+  --hub-desc: #cbc3d7;
+  --node-bg: #313540; /* compact tool icon node (dark) */
+  --smb-bg: #1c1f2a; /* show-more button */
+  --smb-bgh: #262a35;
+  --smb-tx: #dfe2f1;
+  --smb-border: transparent;
+  --smb-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+  /* ---- Why section ---- */
+  --why-bg: #171b26;
+  --why-border: transparent;
+  --why-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --why-badge-bg: #1c1f2a;
+  --why-badge-tx: #5de6ff;
+  --why-badge-border: transparent;
+  --wcard-bg: rgba(28, 31, 42, 0.7);
+  --wcard-border: transparent;
+  --wcard-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --wcard-desc: #cbc3d7;
+
+  /* ---- Metrics strip ---- */
+  --mstrip-bg: #171b26;
+  --mstrip-border: transparent;
+  --mstrip-shadow: none;
+  --m1: #dfe2f1;
+  --m2: #5de6ff;
+  --m3: #d0bcff;
+  --m4: #ffb869;
+
+  /* ---- Footer ---- */
+  --ft-bg: #0a0e18;
+  --ft-border: transparent;
+  --ft-head: #dfe2f1;
+  --ft-link: #cbc3d7;
+  --ft-linkh: #dfe2f1;
+  --ft-brand-desc: #cbc3d7;
+  --st-bg: #171b26;
+  --st-tx: #5de6ff;
+  --st-border: transparent;
+  --st-dot: #5de6ff;
+}
+
+.light {
+  color-scheme: light;
+
+  /* ---- Semantic color tokens (light) ---- */
+  --c-bg: #f8fafc;
+  --c-surface: #f8fafc;
+  --c-on-surface: #0f172a;
+  --c-on-surface-variant: #475569;
+  --c-sc-lowest: #ffffff;
+  --c-sc-low: #ffffff; /* cards render white + border in light source */
+  --c-sc: #ffffff;
+  --c-sc-high: #f1f5f9;
+  --c-sc-highest: #e2e8f0;
+  --c-surface-variant: #e2e8f0;
+  --c-surface-dim: #d2d9f4;
+  --c-surface-bright: #faf8ff;
+  --c-outline: #64748b;
+  --c-outline-variant: #94a3b8;
+  --c-surface-tint: #732ee4;
+
+  --c-primary: #6d28d9;
+  --c-on-primary: #ffffff;
+  --c-primary-container: #7c3aed;
+  --c-on-primary-container: #ede0ff;
+  --c-primary-fixed: #ede9fe;
+  --c-primary-fixed-dim: #d2bbff;
+  --c-on-primary-fixed: #25005a;
+  --c-on-primary-fixed-variant: #5a00c6;
+  --c-inverse-primary: #d2bbff;
+
+  --c-secondary: #0284c7;
+  --c-on-secondary: #ffffff;
+  --c-secondary-container: #39b8fd;
+  --c-on-secondary-container: #004666;
+  --c-secondary-fixed: #e0f2fe;
+  --c-secondary-fixed-dim: #89ceff;
+  --c-on-secondary-fixed: #001e2f;
+  --c-on-secondary-fixed-variant: #004c6e;
+
+  --c-tertiary: #059669;
+  --c-on-tertiary: #ffffff;
+  --c-tertiary-container: #007650;
+  --c-on-tertiary-container: #76ffc2;
+  --c-tertiary-fixed: #ecfdf5;
+  --c-tertiary-fixed-dim: #4edea3;
+  --c-on-tertiary-fixed: #002113;
+  --c-on-tertiary-fixed-variant: #005236;
+
+  --c-error: #e11d48;
+  --c-on-error: #ffffff;
+  --c-error-container: #ffdad6;
+  --c-on-error-container: #93000a;
+
+  --c-inverse-surface: #283044;
+  --c-inverse-on-surface: #eef0ff;
+
+  /* ---- Text refinement tokens ---- */
+  --tx-faint: #94a3b8;
+  --tx-muted: #64748b;
+  --tx-subtle: #475569;
+
+  /* ---- Typography weight differences ---- */
+  --w-strong: 700;
+  --w-lxs: 500;
+  --w-med: 600;
+  --w-mono-strong: 700;
+
+  /* ---- Selection ---- */
+  --sel-bg: #ede9fe;
+  --sel-tx: #4c1d95;
+
+  /* ---- Ambient glow blobs ---- */
+  --glow-1a: rgba(221, 214, 254, 0.4);
+  --glow-1b: rgba(224, 242, 254, 0.3);
+  --glow-2: rgba(237, 233, 254, 0.5);
+  --glow-3: rgba(224, 242, 254, 0.5);
+  --why-glow-a: #ede9fe;
+  --why-glow-b: #e0f2fe;
+
+  /* ---- Header ---- */
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --header-border: 1px solid rgba(226, 232, 240, 0.8);
+  --header-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  --logo-glow: transparent;
+  --logo-ic: #ffffff;
+  --logo-size: 20px;
+  --profile-ring: #e2e8f0;
+
+  --nav-active: #6d28d9;
+  --nav-idle: #475569;
+  --nav-hover: #0f172a;
+
+  --ba-bg: #f1f5f9;
+  --ba-tx: #6d28d9;
+  --ba-border: 1px solid rgba(226, 232, 240, 0.8);
+  --bs-bg: #f1f5f9;
+  --bs-tx: #64748b;
+  --bs-border: transparent;
+
+  --hs-height: 2.25rem;
+  --hs-radius: 0.5rem;
+  --hs-bg: rgba(241, 245, 249, 0.9);
+  --hs-border: 1px solid rgba(226, 232, 240, 0.7);
+  --hs-focus-bg: #ffffff;
+  --hs-focus-border: 1px solid #8b5cf6;
+  --hs-focus-ring: 0 0 0 2px rgba(139, 92, 246, 0.2);
+  --hs-pl: 2.25rem;
+  --hs-icon: #94a3b8;
+
+  --kbd-bg: #ffffff;
+  --kbd-tx: #64748b;
+  --kbd-border: 1px solid #e2e8f0;
+  --kbd-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+  --ib-hov-bg: #f1f5f9;
+  --fav-bg: #7c3aed;
+  --fav-tx: #ffffff;
+  --fav-top: 4px;
+  --fav-right: 4px;
+  --fav-min: 15px;
+  --fav-h: 15px;
+  --radius-pill: 9999px;
+  --si-px: 0.875rem;
+  --si-h: 2.125rem;
+  --si-radius: 0.25rem;
+  --si-bg: #ffffff;
+  --si-border: 1px solid #e2e8f0;
+  --si-tx: #334155;
+  --si-bgh: #f8fafc;
+  --si-txh: #0f172a;
+  --si-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+  /* ---- Hero ---- */
+  --hero-pt: 3.5rem;
+
+  --ey-bg: #f5f3ff;
+  --ey-bgh: rgba(237, 233, 254, 0.7);
+  --ey-border: 1px solid rgba(221, 214, 254, 0.8);
+  --ey-star: #7c3aed;
+  --ey-tx: #6d28d9;
+  --ey-dot: #7c3aed;
+
+  --gradient-title: linear-gradient(
+    to right,
+    #6d28d9,
+    #9333ea,
+    #0284c7
+  );
+
+  --sg-from: #ddd6fe;
+  --sg-to: #bae6fd;
+  --sg-blur: 12px;
+  --sg-op: 0.5;
+  --sg-oph: 0.8;
+
+  --sf-bg: #ffffff;
+  --sf-border: 1px solid rgba(226, 232, 240, 0.9);
+  --sf-radius: 0.5rem;
+  --sf-py: 0.625rem;
+  --sf-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgba(226, 232, 240, 0.6);
+  --sf-focus-bg: #ffffff;
+  --sf-focus-border: 1px solid #8b5cf6;
+  --sf-focus-ring: 0 0 0 2px rgba(139, 92, 246, 0.2);
+  --sf-ic: #7c3aed;
+
+  --tp-bg: #ffffff;
+  --tp-tx: #334155;
+  --tp-bgh: #ffffff;
+  --tp-txh: #6d28d9;
+  --tp-border: 1px solid #e2e8f0;
+  --tp-borderh: 1px solid #a78bfa;
+  --tp-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+  --trust-a: #059669;
+  --trust-b: #0284c7;
+  --trust-c: #7c3aed;
+
+  /* ---- Chips & badges ---- */
+  --mc-bg: #f1f5f9;
+  --mc-tx: #475569;
+  --ct-bg: #f1f5f9;
+  --ct-tx: #475569;
+
+  --tb-bg: #fffbeb;
+  --tb-tx: #92400e;
+  --tb-border: 1px solid #fde68a;
+
+  --va-tx: #6d28d9;
+  --va-txh: #5b21b6;
+
+  /* ---- Category tiles ---- */
+  --tile-bg: #ffffff;
+  --tile-bgh: #ffffff;
+  --tile-border: 1px solid rgba(226, 232, 240, 0.9);
+  --tile-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tile-shadowh: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tile-hovbg: rgba(248, 250, 252, 0.5);
+
+  /* ---- Popular tool cards ---- */
+  --pop-bg: #ffffff;
+  --pop-bgh: #ffffff;
+  --pop-border: 1px solid #e2e8f0;
+  --pop-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --pop-shadowh: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --pop-foot-border: 1px solid #f1f5f9;
+  --pop-desc: #475569;
+
+  /* ---- Sponsored callout ---- */
+  --co-bg: none;
+  --co-border: 1px solid rgba(226, 232, 240, 0.9);
+  --co-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --co-ic-bg: #f5f3ff;
+  --co-ic-tx: #6d28d9;
+  --co-ic-border: 1px solid #ede9fe;
+  --co-label: #64748b;
+  --co-btn-bg: #0f172a;
+  --co-btn-tx: #ffffff;
+  --co-btn-bgh: #6d28d9;
+  --co-btn-txh: #ffffff;
+  --co-btn-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+  /* ---- Detailed category (hub) sections ---- */
+  --hc-bg: #ffffff;
+  --hc-bgh: rgba(248, 250, 252, 0.5);
+  --hc-border: 1px solid rgba(226, 232, 240, 0.9);
+  --hc-hovbg: rgba(248, 250, 252, 0.5);
+  --hc-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --hub-desc: #475569;
+  --node-bg: #ffffff; /* compact icon node (light) */
+  --smb-bg: #ffffff;
+  --smb-bgh: #f1f5f9;
+  --smb-tx: #334155;
+  --smb-border: 1px solid #e2e8f0;
+  --smb-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+  /* ---- Why section ---- */
+  --why-bg: #ffffff;
+  --why-border: 1px solid rgba(226, 232, 240, 0.9);
+  --why-shadow: 0 10px 15px -3px rgba(226, 232, 240, 0.5);
+  --why-badge-bg: #f5f3ff;
+  --why-badge-tx: #6d28d9;
+  --why-badge-border: 1px solid #ddd6fe;
+  --wcard-bg: #f8fafc;
+  --wcard-border: 1px solid rgba(226, 232, 240, 0.8);
+  --wcard-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --wcard-desc: #475569;
+
+  /* ---- Metrics strip ---- */
+  --mstrip-bg: #ffffff;
+  --mstrip-border: 1px solid rgba(226, 232, 240, 0.9);
+  --mstrip-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --m1: #0f172a;
+  --m2: #0284c7;
+  --m3: #6d28d9;
+  --m4: #059669;
+
+  /* ---- Footer ---- */
+  --ft-bg: #ffffff;
+  --ft-border: 1px solid #e2e8f0;
+  --ft-head: #0f172a;
+  --ft-link: #475569;
+  --ft-linkh: #6d28d9;
+  --ft-brand-desc: #475569;
+  --st-bg: #f1f5f9;
+  --st-tx: #047857;
+  --st-border: 1px solid #e2e8f0;
+  --st-dot: #10b981;
+}

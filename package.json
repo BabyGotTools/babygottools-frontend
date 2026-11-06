@@ -1,0 +1,63 @@
+{
+  "name": "babygottools-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource-variable/geist": "^5.1.1",
+    "@fontsource-variable/jetbrains-mono": "^5.1.2",
+    "@pdf-lib/fontkit": "^1.1.1",
+    "@pdf2md/core": "^0.3.0",
+    "@types/csso": "^5.0.5",
+    "@types/diff": "^5.2.3",
+    "@types/papaparse": "^5.5.2",
+    "cron-parser": "^5.10.2",
+    "csso": "^5.0.5",
+    "diff": "^5.2.2",
+    "dompurify": "^3.4.17",
+    "extract-pdf": "^0.1.526",
+    "fflate": "^0.8.3",
+    "graphql": "^16.14.2",
+    "heic2any": "^0.0.4",
+    "highlight.js": "^11.12.0",
+    "html2canvas": "^1.4.1",
+    "marked": "^15.0.12",
+    "nanoid": "^5.1.16",
+    "next": "^15.5.0",
+    "papaparse": "^5.7.0",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^4.10.38",
+    "pdfstudio": "^0.4.0",
+    "pptxgenjs": "^3.12.0",
+    "prettier": "^3.9.10",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "reamkit": "^1.33.1",
+    "sql-formatter": "^15.9.0",
+    "tesseract.js": "^7.0.0",
+    "unicode-properties": "^1.4.1",
+    "uuid": "^11.1.1",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.5",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "puppeteer-core": "^25.16.0",
+    "tailwindcss": "^4.1.5",
+    "typescript": "^5.8.3",
+    "vitest": "^2.1.9"
+  },
+  "overrides": {
+    "@pdf2md/core": {
+      "pdfjs-dist": "6.2.108"
+    },
+    "image-size": "^2.0.3"
+  }
+}

@@ -1,0 +1,225 @@
+/* ================= LIGHT theme accents ================= */
+
+.light [data-accent="pdf"] {
+  --ic-bg: #fff1f2;
+  --ic-tx: #e11d48;
+  --ic-bd: 1px solid #ffe4e6;
+  --hov-tx: #e11d48;
+  --tile-borderh: #fda4af;
+}
+.light [data-accent="image"] {
+  --ic-bg: #f0f9ff;
+  --ic-tx: #0284c7;
+  --ic-bd: 1px solid #e0f2fe;
+  --hov-tx: #0284c7;
+  --tile-borderh: #7dd3fc;
+}
+.light [data-accent="dev"] {
+  --ic-bg: #f5f3ff;
+  --ic-tx: #6d28d9;
+  --ic-bd: 1px solid #ede9fe;
+  --hov-tx: #6d28d9;
+  --tile-borderh: #c4b5fd;
+}
+.light [data-accent="text"] {
+  --ic-bg: #ecfdf5;
+  --ic-tx: #047857;
+  --ic-bd: 1px solid #d1fae5;
+  --hov-tx: #047857;
+  --tile-borderh: #6ee7b7;
+}
+.light [data-accent="social"] {
+  --ic-bg: #eef2ff;
+  --ic-tx: #4f46e5;
+  --ic-bd: 1px solid #e0e7ff;
+  --hov-tx: #4f46e5;
+  --tile-borderh: #a5b4fc;
+}
+.light [data-accent="calc"] {
+  --ic-bg: #ecfeff;
+  --ic-tx: #0e7490;
+  --ic-bd: 1px solid #cffafe;
+  --hov-tx: #0e7490;
+  --tile-borderh: #67e8f9;
+}
+.light [data-accent="prod"] {
+  --ic-bg: #fffbeb;
+  --ic-tx: #b45309;
+  --ic-bd: 1px solid #fef3c7;
+  --hov-tx: #b45309;
+  --tile-borderh: #fcd34d;
+}
+.light [data-accent="sec"] {
+  --ic-bg: #faf5ff;
+  --ic-tx: #7e22ce;
+  --ic-bd: 1px solid #f3e8ff;
+  --hov-tx: #7e22ce;
+  --tile-borderh: #d8b4fe;
+}
+
+.light [data-accent="clipb"] {
+  --ic-bg: #fffbeb;
+  --ic-tx: #b45309;
+  --ic-bd: 1px solid #fef3c7;
+  --pop-borderh: #c4b5fd;
+  --pop-hovtitle: #6d28d9;
+  --pop-meta: #059669;
+  --pop-dot: #10b981;
+  --pop-arrowh: #7c3aed;
+}
+.light [data-accent="mergepdf"] {
+  --ic-bg: #fff1f2;
+  --ic-tx: #e11d48;
+  --ic-bd: 1px solid #ffe4e6;
+  --pop-borderh: #fda4af;
+  --pop-hovtitle: #e11d48;
+  --pop-meta: #64748b;
+  --pop-dot: #64748b;
+  --pop-arrowh: #e11d48;
+}
+.light [data-accent="imgcomp"] {
+  --ic-bg: #f0f9ff;
+  --ic-tx: #0284c7;
+  --ic-bd: 1px solid #e0f2fe;
+  --pop-borderh: #7dd3fc;
+  --pop-hovtitle: #0284c7;
+  --pop-meta: #0369a1;
+  --pop-dot: #0284c7;
+  --pop-arrowh: #0284c7;
+}
+.light [data-accent="jsonf"] {
+  --ic-bg: #f5f3ff;
+  --ic-tx: #6d28d9;
+  --ic-bd: 1px solid #ede9fe;
+  --pop-borderh: #c4b5fd;
+  --pop-hovtitle: #6d28d9;
+  --pop-meta: #64748b;
+  --pop-dot: #64748b;
+  --pop-arrowh: #7c3aed;
+}
+.light [data-accent="qrgen"] {
+  --ic-bg: #fffbeb;
+  --ic-tx: #b45309;
+  --ic-bd: 1px solid #fef3c7;
+  --pop-borderh: #fcd34d;
+  --pop-hovtitle: #b45309;
+  --pop-meta: #64748b;
+  --pop-dot: #64748b;
+  --pop-arrowh: #b45309;
+}
+.light [data-accent="passgen"] {
+  --ic-bg: #faf5ff;
+  --ic-tx: #7e22ce;
+  --ic-bd: 1px solid #f3e8ff;
+  --pop-borderh: #d8b4fe;
+  --pop-hovtitle: #7e22ce;
+  --pop-meta: #059669;
+  --pop-dot: #059669;
+  --pop-arrowh: #7e22ce;
+}
+.light [data-accent="wordcount"] {
+  --ic-bg: #ecfdf5;
+  --ic-tx: #047857;
+  --ic-bd: 1px solid #d1fae5;
+  --pop-borderh: #6ee7b7;
+  --pop-hovtitle: #047857;
+  --pop-meta: #64748b;
+  --pop-dot: #64748b;
+  --pop-arrowh: #047857;
+}
+.light [data-accent="splitpdf"] {
+  --ic-bg: #fff1f2;
+  --ic-tx: #e11d48;
+  --ic-bd: 1px solid #ffe4e6;
+  --pop-borderh: #fda4af;
+  --pop-hovtitle: #e11d48;
+  --pop-meta: #64748b;
+  --pop-dot: #64748b;
+  --pop-arrowh: #e11d48;
+}
+
+.light [data-accent="hubdev"] {
+  --hi-bg: #f5f3ff;
+  --hi-tx: #6d28d9;
+  --hi-bd: 1px solid #ede9fe;
+  --hc-borderh: #c4b5fd;
+  --hchip-bg: #f5f3ff;
+  --hchip-tx: #6d28d9;
+  --hchip-bd: 1px solid #ddd6fe;
+}
+.light [data-accent="hubpdf"] {
+  --hi-bg: #fff1f2;
+  --hi-tx: #e11d48;
+  --hi-bd: 1px solid #ffe4e6;
+  --hc-borderh: #fda4af;
+  --hchip-bg: #fff1f2;
+  --hchip-tx: #be123c;
+  --hchip-bd: 1px solid #fecdd3;
+}
+.light [data-accent="hubimage"] {
+  --hi-bg: #f0f9ff;
+  --hi-tx: #0284c7;
+  --hi-bd: 1px solid #e0f2fe;
+  --hc-borderh: #7dd3fc;
+  --hchip-bg: #f0f9ff;
+  --hchip-tx: #0369a1;
+  --hchip-bd: 1px solid #bae6fd;
+}
+.light [data-accent="hubtext"] {
+  --hi-bg: #ecfdf5;
+  --hi-tx: #047857;
+  --hi-bd: 1px solid #d1fae5;
+  --hc-borderh: #6ee7b7;
+  --hchip-bg: #ecfdf5;
+  --hchip-tx: #047857;
+  --hchip-bd: 1px solid #a7f3d0;
+}
+
+/* Light hub tool nodes (pastel chip + colored glyph) */
+.light [data-accent="n-violet"] { --node-bg: #f5f3ff; --node-tx: #6d28d9; --node-bd: 1px solid #ede9fe; --node-bgh: #f5f3ff; }
+.light [data-accent="n-indigo"] { --node-bg: #eef2ff; --node-tx: #4338ca; --node-bd: 1px solid #e0e7ff; --node-bgh: #eef2ff; }
+.light [data-accent="n-emerald"] { --node-bg: #ecfdf5; --node-tx: #047857; --node-bd: 1px solid #d1fae5; --node-bgh: #ecfdf5; }
+.light [data-accent="n-rose"] { --node-bg: #fff1f2; --node-tx: #e11d48; --node-bd: 1px solid #ffe4e6; --node-bgh: #fff1f2; }
+.light [data-accent="n-sky"] { --node-bg: #f0f9ff; --node-tx: #0369a1; --node-bd: 1px solid #e0f2fe; --node-bgh: #f0f9ff; }
+.light [data-accent="n-sky600"] { --node-bg: #f0f9ff; --node-tx: #0284c7; --node-bd: 1px solid #e0f2fe; --node-bgh: #f0f9ff; }
+.light [data-accent="n-cyan"] { --node-bg: #ecfeff; --node-tx: #0e7490; --node-bd: 1px solid #cffafe; --node-bgh: #ecfeff; }
+.light [data-accent="n-amber"] { --node-bg: #fffbeb; --node-tx: #b45309; --node-bd: 1px solid #fef3c7; --node-bgh: #fffbeb; }
+.light [data-accent="n-purple"] { --node-bg: #faf5ff; --node-tx: #7e22ce; --node-bd: 1px solid #f3e8ff; --node-bgh: #faf5ff; }
+
+/* Light benefit accents */
+.light [data-accent="bolt"] {
+  --bic-bg: #fffbeb;
+  --bic-tx: #d97706;
+  --bic-bd: 1px solid rgba(253, 230, 138, 0.6);
+  --bmeta: #b45309;
+}
+.light [data-accent="free"] {
+  --bic-bg: #f5f3ff;
+  --bic-tx: #6d28d9;
+  --bic-bd: 1px solid rgba(221, 214, 254, 0.6);
+  --bmeta: #6d28d9;
+}
+.light [data-accent="signup"] {
+  --bic-bg: #ecfdf5;
+  --bic-tx: #047857;
+  --bic-bd: 1px solid rgba(209, 250, 229, 0.6);
+  --bmeta: #047857;
+}
+.light [data-accent="privacy"] {
+  --bic-bg: #f0f9ff;
+  --bic-tx: #0284c7;
+  --bic-bd: 1px solid rgba(224, 242, 254, 0.6);
+  --bmeta: #0369a1;
+}
+.light [data-accent="devices"] {
+  --bic-bg: #faf5ff;
+  --bic-tx: #7e22ce;
+  --bic-bd: 1px solid rgba(243, 232, 255, 0.6);
+  --bmeta: #7e22ce;
+}
+.light [data-accent="grow"] {
+  --bic-bg: #f0fdfa;
+  --bic-tx: #0f766e;
+  --bic-bd: 1px solid rgba(204, 251, 241, 0.6);
+  --bmeta: #0f766e;
+}

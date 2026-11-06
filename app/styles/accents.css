@@ -1,0 +1,238 @@
+/*
+ * Accent system — data-accent driven color variables.
+ * Each accent key resolves an icon-chip style, hover border (light),
+ * and hover title / meta / arrow colors in both themes.
+ */
+
+/* ================= DARK (default root) ================= */
+
+[data-accent="pdf"] {
+  --ic-bg: rgba(147, 0, 10, 0.3);
+  --ic-tx: #ffb4ab;
+  --ic-bd: transparent;
+  --hov-tx: #d0bcff;
+  --tile-borderh: transparent;
+}
+[data-accent="image"] {
+  --ic-bg: rgba(0, 203, 230, 0.2);
+  --ic-tx: #5de6ff;
+  --ic-bd: transparent;
+  --hov-tx: #5de6ff;
+  --tile-borderh: transparent;
+}
+[data-accent="dev"] {
+  --ic-bg: rgba(160, 120, 255, 0.2);
+  --ic-tx: #d0bcff;
+  --ic-bd: transparent;
+  --hov-tx: #d0bcff;
+  --tile-borderh: transparent;
+}
+[data-accent="text"] {
+  --ic-bg: rgba(202, 128, 30, 0.3);
+  --ic-tx: #ffb869;
+  --ic-bd: transparent;
+  --hov-tx: #ffb869;
+  --tile-borderh: transparent;
+}
+[data-accent="social"] {
+  --ic-bg: rgba(208, 188, 255, 0.2);
+  --ic-tx: #e9ddff;
+  --ic-bd: transparent;
+  --hov-tx: #d0bcff;
+  --tile-borderh: transparent;
+}
+[data-accent="calc"] {
+  --ic-bg: rgba(47, 217, 244, 0.2);
+  --ic-tx: #5de6ff;
+  --ic-bd: transparent;
+  --hov-tx: #5de6ff;
+  --tile-borderh: transparent;
+}
+[data-accent="prod"] {
+  --ic-bg: #313540;
+  --ic-tx: #5de6ff;
+  --ic-bd: transparent;
+  --hov-tx: #5de6ff;
+  --tile-borderh: transparent;
+}
+[data-accent="sec"] {
+  --ic-bg: rgba(160, 120, 255, 0.3);
+  --ic-tx: #e9ddff;
+  --ic-bd: transparent;
+  --hov-tx: #d0bcff;
+  --tile-borderh: transparent;
+}
+
+[data-accent="clipb"] {
+  --ic-bg: #313540;
+  --ic-tx: #5de6ff;
+  --ic-bd: transparent;
+  --pop-borderh: transparent;
+  --pop-hovtitle: #5de6ff;
+  --pop-meta: #5de6ff;
+  --pop-dot: #5de6ff;
+  --pop-arrowh: #dfe2f1;
+}
+[data-accent="mergepdf"] {
+  --ic-bg: rgba(147, 0, 10, 0.3);
+  --ic-tx: #ffb4ab;
+  --ic-bd: transparent;
+  --pop-borderh: transparent;
+  --pop-hovtitle: #d0bcff;
+  --pop-meta: #cbc3d7;
+  --pop-dot: #cbc3d7;
+  --pop-arrowh: #dfe2f1;
+}
+[data-accent="imgcomp"] {
+  --ic-bg: rgba(0, 203, 230, 0.2);
+  --ic-tx: #5de6ff;
+  --ic-bd: transparent;
+  --pop-borderh: transparent;
+  --pop-hovtitle: #5de6ff;
+  --pop-meta: #5de6ff;
+  --pop-dot: #5de6ff;
+  --pop-arrowh: #dfe2f1;
+}
+[data-accent="jsonf"] {
+  --ic-bg: rgba(160, 120, 255, 0.2);
+  --ic-tx: #d0bcff;
+  --ic-bd: transparent;
+  --pop-borderh: transparent;
+  --pop-hovtitle: #d0bcff;
+  --pop-meta: #cbc3d7;
+  --pop-dot: #cbc3d7;
+  --pop-arrowh: #dfe2f1;
+}
+[data-accent="qrgen"] {
+  --ic-bg: #313540;
+  --ic-tx: #5de6ff;
+  --ic-bd: transparent;
+  --pop-borderh: transparent;
+  --pop-hovtitle: #5de6ff;
+  --pop-meta: #cbc3d7;
+  --pop-dot: #cbc3d7;
+  --pop-arrowh: #dfe2f1;
+}
+[data-accent="passgen"] {
+  --ic-bg: rgba(160, 120, 255, 0.3);
+  --ic-tx: #e9ddff;
+  --ic-bd: transparent;
+  --pop-borderh: transparent;
+  --pop-hovtitle: #d0bcff;
+  --pop-meta: #ffb869;
+  --pop-dot: #ffb869;
+  --pop-arrowh: #dfe2f1;
+}
+[data-accent="wordcount"] {
+  --ic-bg: rgba(202, 128, 30, 0.3);
+  --ic-tx: #ffb869;
+  --ic-bd: transparent;
+  --pop-borderh: transparent;
+  --pop-hovtitle: #ffb869;
+  --pop-meta: #cbc3d7;
+  --pop-dot: #cbc3d7;
+  --pop-arrowh: #dfe2f1;
+}
+[data-accent="splitpdf"] {
+  --ic-bg: rgba(147, 0, 10, 0.3);
+  --ic-tx: #ffb4ab;
+  --ic-bd: transparent;
+  --pop-borderh: transparent;
+  --pop-hovtitle: #d0bcff;
+  --pop-meta: #cbc3d7;
+  --pop-dot: #cbc3d7;
+  --pop-arrowh: #dfe2f1;
+}
+
+/* Hub section accents */
+[data-accent="hubdev"] {
+  --hi-bg: rgba(93, 230, 255, 0.1);
+  --hi-tx: #5de6ff;
+  --hi-bd: transparent;
+  --hc-borderh: transparent;
+  --hchip-bg: #262a35;
+  --hchip-tx: #5de6ff;
+  --hchip-bd: transparent;
+}
+[data-accent="hubpdf"] {
+  --hi-bg: rgba(147, 0, 10, 0.3);
+  --hi-tx: #ffb4ab;
+  --hi-bd: transparent;
+  --hc-borderh: transparent;
+  --hchip-bg: #262a35;
+  --hchip-tx: #ffb4ab;
+  --hchip-bd: transparent;
+}
+[data-accent="hubimage"] {
+  --hi-bg: rgba(0, 203, 230, 0.2);
+  --hi-tx: #5de6ff;
+  --hi-bd: transparent;
+  --hc-borderh: transparent;
+  --hchip-bg: #262a35;
+  --hchip-tx: #5de6ff;
+  --hchip-bd: transparent;
+}
+[data-accent="hubtext"] {
+  --hi-bg: rgba(202, 128, 30, 0.3);
+  --hi-tx: #ffb869;
+  --hi-bd: transparent;
+  --hc-borderh: transparent;
+  --hchip-bg: #262a35;
+  --hchip-tx: #ffb869;
+  --hchip-bd: transparent;
+}
+
+/* Hub tool node accents (dark: colored glyph on inset surface) */
+[data-accent="n-violet"] { --node-tx: #5de6ff; --node-bd: transparent; --node-bgh: #313540; }
+[data-accent="n-indigo"] { --node-tx: #d0bcff; --node-bd: transparent; --node-bgh: #313540; }
+[data-accent="n-emerald"] { --node-tx: #ffb869; --node-bd: transparent; --node-bgh: #313540; }
+[data-accent="n-rose"] { --node-tx: #ffb4ab; --node-bd: transparent; --node-bgh: #313540; }
+[data-accent="n-sky"] { --node-tx: #5de6ff; --node-bd: transparent; --node-bgh: #313540; }
+[data-accent="n-sky600"] { --node-tx: #5de6ff; --node-bd: transparent; --node-bgh: #313540; }
+[data-accent="n-cyan"] { --node-tx: #d0bcff; --node-bd: transparent; --node-bgh: #313540; }
+[data-accent="n-amber"] { --node-tx: #ffb869; --node-bd: transparent; --node-bgh: #313540; }
+[data-accent="n-purple"] { --node-tx: #5de6ff; --node-bd: transparent; --node-bgh: #313540; }
+
+/* Benefit accents */
+[data-accent="bolt"] {
+  --bic-bg: rgba(93, 230, 255, 0.1);
+  --bic-tx: #5de6ff;
+  --bic-bd: transparent;
+  --bmeta: #5de6ff;
+}
+[data-accent="free"] {
+  --bic-bg: rgba(208, 188, 255, 0.1);
+  --bic-tx: #d0bcff;
+  --bic-bd: transparent;
+  --bmeta: #d0bcff;
+}
+[data-accent="signup"] {
+  --bic-bg: rgba(255, 184, 105, 0.1);
+  --bic-tx: #ffb869;
+  --bic-bd: transparent;
+  --bmeta: #ffb869;
+}
+[data-accent="privacy"] {
+  --bic-bg: rgba(93, 230, 255, 0.1);
+  --bic-tx: #5de6ff;
+  --bic-bd: transparent;
+  --bmeta: #5de6ff;
+}
+[data-accent="devices"] {
+  --bic-bg: rgba(208, 188, 255, 0.1);
+  --bic-tx: #d0bcff;
+  --bic-bd: transparent;
+  --bmeta: #d0bcff;
+}
+[data-accent="grow"] {
+  --bic-bg: rgba(255, 184, 105, 0.1);
+  --bic-tx: #ffb869;
+  --bic-bd: transparent;
+  --bmeta: #ffb869;
+}
+
+.benefit-meta { color: var(--bmeta); }
+.m1 { color: var(--m1); }
+.m2 { color: var(--m2); }
+.m3 { color: var(--m3); }
+.m4 { color: var(--m4); }
