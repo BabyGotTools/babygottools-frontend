@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Icon from "../common/Icon";
 import type { ToolItem } from "@/data/tools";
-
 /**
  * Homepage visual classes stay byte-identical; when a tool has a real route we
  * render the card as a next/link instead of a div — same look, clickable.
@@ -85,31 +84,34 @@ export const toolRouteByTitle: Record<string, string> = {
   "PDF to Markdown": "/tools/pdf-to-markdown",
   "PDF to Text": "/tools/pdf-to-text",
   "PDF to HTML": "/tools/pdf-to-html",
-};
 
-/**
- * Card decoration for tools without a real route yet. A deliberately
- * golden chip (theme-independent) so "not ready" reads instantly in both
- * themes without touching the accent system.
- */
-export function ComingSoonBadge() {
-  return (
-    <span
-      className="absolute top-2 right-2 z-10 inline-flex items-center gap-1 px-2 py-[3px] rounded-full text-[9px] leading-none font-bold uppercase tracking-[0.08em] text-[#2b1902] shadow-md"
-      style={{ background: "linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%)" }}
-    >
-      <Icon name="schedule" size={10} style={{ color: "#2b1902" }} />
-      <span>Coming Soon</span>
-    </span>
-  );
-}
+  /* Image & Media Tools — titles verbatim from data/tools.ts. */
+  "Image Compressor": "/tools/image-compressor",
+  "Image Resizer & Aspect Ratio": "/tools/image-resizer",
+  "Image to Data URI / Base64": "/tools/image-to-data-uri",
+  "Color Palette Extractor": "/tools/color-palette-extractor",
+  "Favicon Package Generator": "/tools/favicon-generator",
+  "EXIF Metadata Stripper": "/tools/exif-stripper",
+
+  /* Text & Writing Tools — titles verbatim from data/tools.ts. */
+  "Case Converter": "/tools/case-converter",
+  "Side-by-Side Text Diff": "/tools/text-diff",
+  "Remove Duplicate Lines": "/tools/remove-duplicate-lines",
+  "Lorem Ipsum Generator": "/tools/lorem-ipsum-generator",
+  "Markdown Live Preview": "/tools/markdown-live-preview",
+  "Invisible Unicode Character": "/tools/invisible-unicode-character",
+  "Word & Character Counter": "/tools/word-counter",
+
+  /* Utility & productivity cards on the homepage. */
+  "QR Code Generator": "/tools/qr-code-generator",
+  "Password Generator": "/tools/password-generator",
+};
 
 export default function ToolCard({ tool }: { tool: ToolItem }) {
   const href = toolRouteByTitle[tool.title];
   const className = "tool-card";
   const content = (
     <>
-      {!href && <ComingSoonBadge />}
       <div className="node">{tool.glyph ? tool.glyph : <Icon name={tool.icon ?? ""} size={20} />}</div>
       <div className="min-w-0 flex-1">
         <h3 className="font-body-md text-body-md text-on-surface font-medium truncate">{tool.title}</h3>

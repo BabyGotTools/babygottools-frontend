@@ -5,7 +5,7 @@ import Breadcrumbs from "./Breadcrumbs";
 import HeroMetricsCluster from "./HeroMetricsCluster";
 import { EngineCapabilities, RelatedToolsRow, ToolFaqGrid } from "./ToolSections";
 import { textTone } from "./tone";
-import { devToolSchemas, JsonLdScript } from "@/lib/jsonld";
+import { devToolSchemas, toolCategoryTrail, JsonLdScript } from "@/lib/jsonld";
 
 export interface ToolPageShellProps {
   tool: DevTool;
@@ -22,10 +22,19 @@ const chipClasses: Record<string, string> = {
   soft: "inline-flex items-center px-space-xs py-0.5 rounded bg-surface-container-low text-on-surface-variant text-label-mono-xs font-label-mono-xs",
 };
 
-/** Derive the subject noun for section headings ("JSON Formatter & Validator" -> "JSON"). */
+/** Derive the subject noun for section headings ("Image Compressor — WebP & AVIF" -> "Image Compressor"). */
 function shortName(tool: DevTool): string {
   const base = tool.alias ?? tool.title;
-  return base.replace(/\s*[&/].*$/, "").trim();
+  return base
+    .replace(/\s*[\u2013\u2014].*$/, "") // em/en dash subtitle
+    .replace(/\s*[&/].*$/, "") // "& Validator", "/ Scripts"
+    .trim();
+}
+
+/** Category page for the middle breadcrumb crumb (matches BreadcrumbList JSON-LD). */
+function categoryCrumb(tool: DevTool): { label: string; href: string } {
+  const [trail] = toolCategoryTrail(tool);
+  return { label: trail.name, href: trail.url ?? "/" };
 }
 
 /** Server-rendered tool page frame mirroring the Stitch tool-page layout. */
@@ -45,7 +54,7 @@ export default function ToolPageShell({ tool, ribbon, children }: ToolPageShellP
       <div className="absolute top-20 -left-20 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="w-full max-w-7xl mx-auto px-gutter-desktop py-space-md relative">
-        <Breadcrumbs current={title} />
+        <Breadcrumbs current={title} category={categoryCrumb(tool)} />
 
         {/* Tool header card */}
         <div className="bg-surface-container rounded-xl p-space-lg mb-space-lg shadow-xl relative overflow-hidden">
@@ -97,7 +106,7 @@ export default function ToolPageShell({ tool, ribbon, children }: ToolPageShellP
           items={tool.capabilities}
         />
 
-        <RelatedToolsRow heading="Complementary Developer Utilities" items={tool.related} />
+        <RelatedToolsRow heading={tool.relatedHeading ?? "Complementary Developer Utilities"} items={tool.related} />
 
         <ToolFaqGrid heading={tool.faqHeading ?? `Working With ${title}`} faqs={tool.faqs} />
       </div>

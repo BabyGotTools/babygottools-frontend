@@ -19,7 +19,7 @@ export const SEO_BY_SLUG: Record<string, ToolSeo> = {
   /* ===================== Developer tools ===================== */
 
   "json-formatter": {
-    title: "JSON Formatter & Validator — Beautify Online",
+    title: "JSON Formatter & Validator — Free Online",
     description:
       "Format, validate and minify JSON instantly in your browser. Auto-detects syntax errors, explores syntax trees, and never uploads a byte — completely free.",
   },
@@ -114,7 +114,7 @@ export const SEO_BY_SLUG: Record<string, ToolSeo> = {
       "Test, debug and visualize regular expressions with live match highlighting and capture group breakdown — instant results with zero server round-trips.",
   },
   "cron-parser": {
-    title: "Cron Expression Parser — Explain & Next Runs",
+    title: "Cron Expression Parser — Next Run Times",
     description:
       "Translate cron expressions into plain English, validate schedules and preview the next 10 execution times — a free, instant developer utility.",
   },
@@ -144,9 +144,93 @@ export const SEO_BY_SLUG: Record<string, ToolSeo> = {
       "Parse raw HTTP request and response headers with clear formatting and a security-oriented read-out. Free, instant and never leaves your browser.",
   },
   "online-clipboard": {
-    title: "Online Clipboard — Share Text Across Devices",
+    title: "Online Clipboard — Share Text Anywhere",
     description:
       "Beam text between devices with a one-time 6-character code. Messages auto-delete within minutes — no accounts, no sign-up, no tracking.",
+  },
+
+  /* ===================== Text & writing tools ===================== */
+
+  "word-counter": {
+    title: "Word & Character Counter — Live Stats",
+    description:
+      "Count words, characters, sentences, reading and speaking time live as you type. Keyword density and paragraph stats included — nothing is uploaded.",
+  },
+  "case-converter": {
+    title: "Case Converter — 12 Text Formats Online",
+    description:
+      "Convert text to UPPER, lower, Title, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE and more. Instant, free and fully in-browser.",
+  },
+  "text-diff": {
+    title: "Text Diff — Compare Two Texts Side-by-Side",
+    description:
+      "Spot every change between two texts with a Myers diff at line, word or character granularity. Ignore-case option included — nothing is uploaded.",
+  },
+  "remove-duplicate-lines": {
+    title: "Remove Duplicate Lines — Clean Lists Fast",
+    description:
+      "De-duplicate large lists instantly, with case sensitivity, trim and sort options. Perfect for cleaning email lists and logs — processed locally.",
+  },
+  "lorem-ipsum-generator": {
+    title: "Lorem Ipsum Generator — Placeholder Text",
+    description:
+      "Generate classic or modern lorem ipsum by paragraphs, sentences or words with HTML wrapping options. Free, instant and runs entirely in-browser.",
+  },
+  "markdown-live-preview": {
+    title: "Markdown Live Preview — Render to HTML",
+    description:
+      "Write GitHub-flavored Markdown and see a sanitized live preview instantly. Copy or download clean standalone HTML — no upload, no tracking.",
+  },
+  "invisible-unicode-character": {
+    title: "Invisible Character — Copy Blank Space",
+    description:
+      "Copy zero-width spaces and other invisible Unicode characters instantly. Includes a scanner that finds hidden characters in pasted text.",
+  },
+
+  /* ===================== Image & media tools ===================== */
+
+  "image-compressor": {
+    title: "Image Compressor — PNG, JPG, WebP & AVIF",
+    description:
+      "Compress PNG, JPEG and WebP images in your browser with native and WASM encoders. Batch support, quality control and ZIP export — zero uploads.",
+  },
+  "image-resizer": {
+    title: "Image Resizer — Custom Dimensions & Aspect",
+    description:
+      "Resize images to exact pixel dimensions with aspect-ratio locking and quick presets. Batch processing and ZIP download — fully client-side.",
+  },
+  "image-to-data-uri": {
+    title: "Image to Data URI — Base64 Converter",
+    description:
+      "Convert any image to a Base64 data URI with ready-made HTML and CSS snippets plus an overhead report. Byte-exact, instant and in-browser.",
+  },
+  "color-palette-extractor": {
+    title: "Color Palette Extractor — HEX from Photos",
+    description:
+      "Extract HEX, RGB and HSL palettes from any photo with median-cut quantization and share stats. Export as CSS variables or JSON — no upload.",
+  },
+  "favicon-generator": {
+    title: "Favicon Generator — All Sizes + ICO",
+    description:
+      "Generate a full favicon package: 16–512px PNGs, multi-resolution .ico, web manifest and paste-ready link tags. Square-safe, processed locally.",
+  },
+  "exif-stripper": {
+    title: "EXIF Stripper — Remove Photo Metadata",
+    description:
+      "Inspect and strip EXIF metadata including GPS location from photos. Re-encodes clean copies in your browser — your images are never uploaded.",
+  },
+
+  /* ===================== Utility tools ===================== */
+
+  "qr-code-generator": {
+    title: "QR Code Generator — SVG & PNG Export",
+    description:
+      "Create high-resolution QR codes with custom colors, size, error correction and logo overlay. Vector SVG and PNG export — no tracking pixels.",
+  },
+  "password-generator": {
+    title: "Password Generator — Secure & Random",
+    description:
+      "Generate cryptographically secure passwords and passphrases with unbiased CSPRNG sampling, entropy analysis and bulk export. Nothing is stored.",
   },
 
   /* ===================== PDF & document tools ===================== */
@@ -237,7 +321,7 @@ export const SEO_BY_SLUG: Record<string, ToolSeo> = {
       "Render HTML markup into print-ready PDF pages with CSS handling. Paste code and export instantly — everything executes in your browser.",
   },
   "json-to-csv-converter": {
-    title: "JSON to CSV Converter — Export Tables Instantly",
+    title: "JSON to CSV Converter — Export Instantly",
     description:
       "Flatten JSON arrays into downloadable CSV spreadsheets with custom column keys. Paste, convert and download — fully client-side, free and instant.",
   },
@@ -252,12 +336,12 @@ export const SEO_BY_SLUG: Record<string, ToolSeo> = {
       "Generate time-ordered UUID v7 identifiers in batches — sortable, database-index friendly and cryptographically secure. Computed locally, free.",
   },
   "api-mock-generator": {
-    title: "API Mock Generator — Realistic Test Payloads",
+    title: "API Mock Generator — Test Payloads",
     description:
       "Synthesize realistic JSON mock payloads from schema definitions to unblock frontend development. No backend needed — generated in your browser.",
   },
   "unicode-security-inspector": {
-    title: "Unicode Security Inspector — Spoof Detection",
+    title: "Unicode Security Inspector — Spoof Check",
     description:
       "Reveal hidden Unicode characters, zero-width spaces and RTL bidi markers used in phishing and spoofing attacks. Free analysis, fully offline.",
   },
@@ -267,7 +351,7 @@ export const SEO_BY_SLUG: Record<string, ToolSeo> = {
       "Format messy Lua scripts with clean indentation and block structure. Paste, beautify and copy — instant, free and running entirely client-side.",
   },
   "php-beautifier": {
-    title: "PHP Beautifier — PSR-12 Compliant Formatting",
+    title: "PHP Beautifier — PSR-12 Formatting",
     description:
       "Format PHP code to PSR-12 style with correct indentation, spacing and brace placement. A free, instant formatter that never uploads your code.",
   },

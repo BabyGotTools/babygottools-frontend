@@ -4,7 +4,7 @@ import Icon from "../common/Icon";
 import Link from "next/link";
 import { ViewAllLink } from "../common/SectionHeading";
 import { popularTools, type PopularTool } from "@/data/tools";
-import { toolRouteByTitle, ComingSoonBadge } from "@/components/tools/ToolCard";
+import { toolRouteByTitle } from "@/components/tools/ToolCard";
 import { useReveal } from "@/hooks/useReveal";
 
 interface PopularToolsProps {
@@ -36,7 +36,6 @@ export default function PopularTools({ tools = popularTools }: PopularToolsProps
           const href = toolRouteByTitle[tool.title];
           const card = (
             <div className="pop-card relative overflow-hidden" data-accent={tool.accent} tabIndex={0}>
-              {href ? null : <ComingSoonBadge />}
               <div className="space-y-3">
                 <div className="flex items-center justify-between gap-2">
                   <div className="ic-chip">

@@ -5,10 +5,12 @@ interface BreadcrumbsProps {
   current: string;
   /** "tool" pages use brighter base text; hub uses outline text. */
   variant?: "tool" | "hub" | "pdf";
+  /** Middle crumb for registry tools (label + href of the category page). */
+  category?: { label: string; href: string };
 }
 
-/** Reference breadcrumb bar: Home / Developer Tools / {Current}. */
-export default function Breadcrumbs({ current, variant = "tool" }: BreadcrumbsProps) {
+/** Reference breadcrumb bar: Home / {Category} / {Current}. */
+export default function Breadcrumbs({ current, variant = "tool", category }: BreadcrumbsProps) {
   if (variant === "hub") {
     // Stitch hub: Home / Categories / [PDF & Document Tools current-pill].
     return (
@@ -79,8 +81,8 @@ export default function Breadcrumbs({ current, variant = "tool" }: BreadcrumbsPr
         <span>Home</span>
       </Link>
       <span className="text-outline-variant">/</span>
-      <Link className="hover:text-secondary transition-colors" href="/developer-tools">
-        Developer Tools
+      <Link className="hover:text-secondary transition-colors" href={category?.href ?? "/developer-tools"}>
+        {category?.label ?? "Developer Tools"}
       </Link>
       <span className="text-outline-variant">/</span>
       <span className="text-secondary font-semibold" aria-current="page">

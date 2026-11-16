@@ -89,14 +89,31 @@ function webApplicationLd(
 export function devToolSchemas(tool: DevTool): Json[] {
   const name = tool.alias ?? tool.title;
   return [
-    breadcrumbLd([
-      { name: "Home", url: "/" },
-      { name: "Developer Tools", url: "/developer-tools" },
-      { name },
-    ]),
+    breadcrumbLd([{ name: "Home", url: "/" }, ...toolCategoryTrail(tool), { name }]),
     faqLd(tool.faqs),
-    webApplicationLd(name, tool.slug, tool.desc, "DeveloperApplication"),
+    webApplicationLd(name, tool.slug, tool.desc, applicationCategoryFor(tool.category)),
   ];
+}
+
+/** Middle breadcrumb for a registry tool, matching the visible breadcrumb bar. */
+export function toolCategoryTrail(tool: Pick<DevTool, "category">): { name: string; url?: string }[] {
+  switch (tool.category) {
+    case "image":
+      return [{ name: "Image & Media Tools", url: "/image-tools" }];
+    case "text":
+      return [{ name: "Text & Writing Tools", url: "/text-tools" }];
+    case "utility":
+      // QR/password tools live on the homepage Popular Tools grid.
+      return [{ name: "Popular Tools", url: "/#popular" }];
+    default:
+      return [{ name: "Developer Tools", url: "/developer-tools" }];
+  }
+}
+
+function applicationCategoryFor(category: DevTool["category"]): string {
+  if (category === "image") return "MultimediaApplication";
+  if (category === "utility") return "UtilitiesApplication";
+  return "DeveloperApplication";
 }
 
 export function pdfToolSchemas(tool: PdfTool): Json[] {

@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next";
 import { devTools } from "@/data/devTools";
+import { textTools } from "@/data/textTools";
+import { imageTools } from "@/data/imageTools";
+import { utilityTools } from "@/data/utilityTools";
 import { PDF_TOOLS } from "@/data/pdfTools";
 import { SITE_URL, absoluteUrl } from "@/lib/site";
 
@@ -23,6 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { url: SITE_URL, changeFrequency: "weekly" as const, priority: 1 },
       { url: absoluteUrl("/developer-tools"), changeFrequency: "weekly" as const, priority: 0.9 },
       { url: absoluteUrl("/tools/pdf"), changeFrequency: "weekly" as const, priority: 0.9 },
+      { url: absoluteUrl("/image-tools"), changeFrequency: "weekly" as const, priority: 0.9 },
+      { url: absoluteUrl("/text-tools"), changeFrequency: "weekly" as const, priority: 0.9 },
       ...["/about", "/contact", "/privacy", "/terms"].map((path) => ({
         url: absoluteUrl(path),
         changeFrequency: "monthly" as const,
@@ -32,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ).map((entry) => ({ ...entry, lastModified: buildDate }));
 
   const toolRoutes: MetadataRoute.Sitemap = [
-    ...devTools.map((tool) => ({
+    ...[...devTools, ...textTools, ...imageTools, ...utilityTools].map((tool) => ({
       url: absoluteUrl(`/tools/${tool.slug}`),
       lastModified: buildDate,
       changeFrequency: "monthly" as const,
