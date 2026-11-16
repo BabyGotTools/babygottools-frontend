@@ -11,6 +11,8 @@
   "dependencies": {
     "@fontsource-variable/geist": "^5.1.1",
     "@fontsource-variable/jetbrains-mono": "^5.1.2",
+    "@jsquash/avif": "^2.1.1",
+    "@jsquash/webp": "^1.5.0",
     "@pdf-lib/fontkit": "^1.1.1",
     "@pdf2md/core": "^0.3.0",
     "@types/csso": "^5.0.5",
@@ -20,6 +22,7 @@
     "csso": "^5.0.5",
     "diff": "^5.2.2",
     "dompurify": "^3.4.17",
+    "exifr": "^7.1.3",
     "extract-pdf": "^0.1.526",
     "fflate": "^0.8.3",
     "graphql": "^16.14.2",
@@ -35,6 +38,7 @@
     "pdfstudio": "^0.4.0",
     "pptxgenjs": "^3.12.0",
     "prettier": "^3.9.10",
+    "qrcode": "^1.5.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "reamkit": "^1.33.1",
@@ -47,6 +51,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.5",
     "@types/node": "^22.15.0",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "puppeteer-core": "^25.16.0",

@@ -42,7 +42,7 @@ export default function ToolCategorySection({
                 {hub.title}
               </h2>
               <span className="hub-chip" data-accent={hub.accent}>
-                {hub.count > 0 ? `${hub.count} tools` : "Coming Soon"}
+                {`${hub.count} tools`}
               </span>
             </div>
             <p className="font-body-sm text-body-sm text-hub-desc">{hub.subtitle}</p>

@@ -30,4 +30,12 @@ export const INDENT_BTN_IDLE = "px-2 py-1 rounded text-on-surface-variant hover:
 
 export const RIBBON_DIVIDER = "w-px h-4 bg-surface-container-highest mx-1";
 
+/**
+ * Full wrapper for a hero control-ribbon row (rendered via useRibbonPortal).
+ * Adds a hairline divider above the strip so the toolbar reads as its own
+ * region instead of floating under the hero description.
+ */
+export const RIBBON_ROW =
+  "mt-space-lg pt-space-md border-t border-outline-variant/60 flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low/70 -mx-space-lg -mb-space-lg px-space-lg py-space-sm rounded-b-xl";
+
 export const RIBBON_KBD = "ml-1 px-1 py-0.5 bg-on-primary/20 rounded text-[9px]";

@@ -2,6 +2,9 @@
 
 export type DevToolCategory = "formatters" | "encoders" | "generators" | "security" | "parsers";
 
+/** Broader category space for the other registries (text/image/utility tools). */
+export type ToolCategory = DevToolCategory | "text" | "image" | "utility";
+
 /** Icon/badge/hover color anchors mapped to theme tokens. */
 export type AccentTone = "primary" | "secondary" | "tertiary" | "error" | "neutral" | "engine" | "on-surface";
 
@@ -59,7 +62,9 @@ export interface DevTool {
   heroDesc: string;
   icon: string;
   accent: AccentTone;
-  category: DevToolCategory;
+  category: ToolCategory;
+  /** Optional override for the related-tools row heading (default: developer phrasing). */
+  relatedHeading?: string;
   popularity: number;
   tags: string[];
   /** Card grid badge chips */
@@ -88,7 +93,7 @@ export interface DevToolHubCard {
   desc: string;
   icon: string;
   accent: AccentTone;
-  category: DevToolCategory;
+  category: ToolCategory;
   popularity: number;
   tags: string[];
   badges: ToolBadge[];

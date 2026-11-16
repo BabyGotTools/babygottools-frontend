@@ -1,7 +1,11 @@
 /** Blob/object-URL download with an automatically inferred filename. */
 export function downloadText(content: string, filename: string, mime = "text/plain;charset=utf-8") {
   if (typeof Blob === "undefined") return;
-  const blob = new Blob([content], { type: mime });
+  downloadBlob(new Blob([content], { type: mime }), filename);
+}
+
+/** Download a pre-built Blob (binary outputs, images, ZIPs). */
+export function downloadBlob(blob: Blob, filename: string) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
